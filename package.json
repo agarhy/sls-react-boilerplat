@@ -1,0 +1,20 @@
+{
+  "name": "aws-serverless-react-boilerplate",
+  "version": "1.0.0",
+  "description": "AWS Serverless React Project boilerplate",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend-install": "cd backend && npm i",
+    "client-install": "cd client && npm i",
+    "project-install": "concurrently \"npm run backend-install\" \"npm run client-install\"",
+    "backend-start": "cd backend && sls offline --httpPort 3031",
+    "client-start": "cd client && npm start",
+    "start": "concurrently \"npm run backend-start\" \"npm run client-start\""
+  },
+  "author": "Ahmed Garhy",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
